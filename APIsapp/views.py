@@ -124,7 +124,7 @@ class OrderViewSet(viewsets.ModelViewSet):
             'order': serializer.data
         }, status=202)
 
-    @action(detail=True, methods=['patch'], permission_classes=[IsDeliveryCrew])
+    @action(detail=True, methods=['patch','post'], permission_classes=[IsDeliveryCrew])
     def mark_delivered(self, request, pk=None):
         """配送員標記訂單已送達"""
         order = self.get_object()
