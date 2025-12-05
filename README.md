@@ -143,8 +143,8 @@ APIsProject/
 | ------ | ------------------ | ----------- |
 | GET    | `/api/cart/`       | List items  |
 | POST   | `/api/cart/`       | Add item    |
-         | DELETE | `/api/cart/{id}/`  | Remove item |
-         | DELETE | `/api/cart/clear/` | Clear cart  |
+| DELETE | `/api/cart/{id}/`  | Remove item |
+| DELETE | `/api/cart/clear/` | Clear cart  |
 
 ---
 
@@ -181,17 +181,6 @@ Custom permissions are defined in `permissions.py`:
 | `IsAdmin`        | User in "Admin" group         |
 | `IsManager`      | User in "Manager" group       |
 | `IsDeliveryCrew` | User in "Delivery crew" group |
-
-DRF default permissions:
-
-```python
-'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated']
-```
-
-Some endpoints override with:
-
-* `IsAuthenticatedOrReadOnly` (public menu access)
-* Role permissions on specific actions
 
 ---
 
